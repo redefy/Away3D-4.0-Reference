@@ -25,8 +25,8 @@
 	away3d.core.render              || непереведен
 	away3d.core.sort                || непереведен
 	away3d.core.traverse            || переведен
-	away3d.debug                    || частично	
-	away3d.debug.data               || частично (в процессе)
+	away3d.debug                    || переведен	
+	away3d.debug.data               || переведен
 	away3d.entities                 || переведен
 	away3d.errors                   || переведен
 	away3d.events                   || частично	

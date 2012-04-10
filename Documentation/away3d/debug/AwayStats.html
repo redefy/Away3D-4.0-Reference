@@ -11,7 +11,7 @@
 					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AwayStats"); titleBar_setSubNav(false,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
 				-->
 			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">away3d.debug</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  AwayStats</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">AwayStats  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.display.Sprite</td></tr></table><p></p><p></p><p></p>
-	              <p>Окно статистики может использоваться для показа различной статистики в Away3D приложении 
+	              <p>Виджет статистики может использоваться для показа различной статистики в Away3D приложении 
 	 или в любом другом приложении. Виджет, специально был разработан с целью показа всех необходимых 
 	 данных таким образом, чтобы их легко можно было прочесть, но при этом чтобы сам виджет был 
 	 небольшого размера.</p>
@@ -19,17 +19,17 @@
 	              <p>Следующие данные показываются в виджете либо графически, либо с помощью текста,
 	 либо обоими вариантами.</p>
 	              <ul>
-	                 <li>Текущая частота кадров в FPS (белый график/бар)</li>
+	                 <li>Текущая частота кадров в FPS (белый график/полоска)</li>
 	                 <li>Частота кадров SWF (Stage.frameRate)</li>
-	                 <li>Средний FPS (синий график / бар)</li>
-	                 <li>Минимальный/максимальный FPS (только в баре частоты кадров в минимизированном режиме)</li>
+	                 <li>Средний FPS (синий график / полоска)</li>
+	                 <li>Минимальный/максимальный FPS (только на полоске частоты кадров в минимизированном режиме)</li>
 	                 <li>Текущий размер занимаемой оперативной памяти (розовый график)</li>
 	                 <li>Максимальный размер занимаемой оперативной памяти</li>
 	                 <li>Количество полигонов в сцене</li>
 	                 <li>Количество полигонов визуализированных в последнем цикле рендеринга (желтый график)</li>
 	              </ul> 
 	 
-	              <p>Есть два режима отображения окна; стандартный и минимизированный, которые сменяют друг друга при клике
+	              <p>Есть два режима отображения виджета; стандартный и минимизированный, которые сменяют друг друга при клике
 	 по кнопке в верхнем правом углу. При создании виджета, можно сразу указать чтобы он запускался в 
 	 минимизированном режиме установив соответствующий параметр в конструкторе виджета в true. </p>
 	 
@@ -39,7 +39,7 @@
 	 уменьшена при клике по верхней или нижней части диаграммы. Чем ближе к центру диаграммы вы будете кликать
 	 мышкой, тем медленнее будет увеличиваться частота кадров сцены, чем дальше от центра диаграммы вы будете
 	 кликать мышкой тем быстрее будет увеличиваться частота кадров сцены. Все просто. Диаграмма показывается
-	 только в стандартном режиме отображения окна.</p>
+	 только в стандартном режиме отображения виджета.</p>
 	 
 	              <p>Средний FPS рассчитывается опираясь на значение одного их переданных параметров конструктора.
 	 Передав в параметр конструктора meanDataLength ненулевое значение, вы определите количество записей
@@ -70,24 +70,24 @@
 		 быть зарегистрированны при помощи метода registerView(). Не передавайте ссылку на вьюпорт в
 		 параметр view конструктора если хотите отключить эту возможность полностью.</p>
 		 
-		 </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">view3d</span>:<a href="../../away3d/containers/View3D.html">View3D</a></code> (default = <code>null</code>)<code></code> &mdash; Ссылка на ваш Away3D вьюпорт. Это необходимо если вы хотите
+		 </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">view3d</span>:<a href="../../away3d/containers/View3D.html">View3D</a></code> (default = <code>null</code>)<code></code> &mdash; ссылка на ваш Away3D вьюпорт. Это необходимо если вы хотите
 		 видеть количество полигонов находящихся в данный момент в сцене.
 		 
-		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">minimized</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Определяет будет ли виджет запускаться в минимизированном режиме.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">minimized</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; определяет будет ли виджет запускаться в минимизированном режиме.
 		 По умолчанию, виджет запускается в стандартном режиме.
 		 
-		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">transparent</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Определяет будет ли у виджета рисоваться фон.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">transparent</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; определяет будет ли у виджета рисоваться фон.
 		 
-		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">meanDataLength</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; Количество кадров на основе которых расчитывается средняя частота
-		 кадров. Значение по умолчанию 0, означает что учитываются все кадры начиная с момента  
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">meanDataLength</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; количество слепков кадров на основе которых расчитывается средняя частота
+		 кадров. Значение по умолчанию 0 означает что учитываются все кадры начиная с момента  
 		 последнего сброса счетчиков.
 		 
-		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">enableClickToReset</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; Активирует возможность сброса всех счетчиков при клике 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">enableClickToReset</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; активирует возможность сброса всех счетчиков при клике 
 		 по нижнему бару виджета. Когда эта возможность активирована вы также можете
 		 сбрасывать значение средней частоты кадров просто кликая по текстовому полю показывающее
 		 это значение.
 		 
-		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">enableModifyFrameRate</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; Активирует возможность изменения частоты кадров SWF при
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">enableModifyFrameRate</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; активирует возможность изменения частоты кадров SWF при
 		 клике по верхней или нижней части диаграммы.
 		 </td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="registerView()"></a><a name="registerView(away3d.containers.View3D)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">registerView</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function registerView(view3d:<a href="../../away3d/containers/View3D.html">View3D</a>):void</code><p></p><p></p><p>
 		 Добавляет вьюпорт в список тех вьюпортов, которые учитываются при расчете общего
@@ -102,4 +102,4 @@
 		 вьюпортом известным виджету, то при вызове этого метода, вектор _views станет пустым и вся
 		 статистика по количеству полигонов рисующихся на экране будет отключена.
 		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">view3d</span>:<a href="../../away3d/containers/View3D.html">View3D</a></code> &mdash; вьюпорт.
-		 </td></tr></table></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Mon Apr 9 2012, 09:35 AM +07:00  </center></div></body></html><!--<br/>Mon Apr 9 2012, 09:35 AM +07:00  -->
+		 </td></tr></table></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Tue Apr 10 2012, 09:47 AM +07:00  </center></div></body></html><!--<br/>Tue Apr 10 2012, 09:47 AM +07:00  -->
