@@ -34,10 +34,10 @@
 	away3d.extrusions.utils         || непереведен
 	away3d.filters                  || непереведен
 	away3d.filters.tasks            || непереведен
-	away3d.library                  || непереведен
-	away3d.library.assets           || непереведен
-	away3d.library.naming           || непереведен
-	away3d.library.utils            || непереведен
+	away3d.library                  || переведен
+	away3d.library.assets           || переведен
+	away3d.library.naming           || переведен
+	away3d.library.utils            || переведен
 	away3d.lights                   || непереведен
 	away3d.lights.shadowmaps        || непереведен
 	away3d.loaders                  || непереведен

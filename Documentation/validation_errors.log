@@ -1,3 +1,0 @@
-Text for param in away3d.tools.commands:Align/alignMeshes is not valid.
-org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 5; Тип элемента "Mesh" должен заканчиваться соответствующим концевым тегом "</Mesh>".
-
